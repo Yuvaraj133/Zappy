@@ -27,7 +27,11 @@ function isAuthenticated(req, res, next) {
     console.log(req.session)
     return next();
   } else {
+<<<<<<< HEAD
     return res.redirect('/login');
+=======
+    return res.redirect('/404');
+>>>>>>> harini
   }
 }
 
@@ -579,12 +583,20 @@ app.use(express.json());
 
 
 
+<<<<<<< HEAD
 app.get('/element_add',isAuthenticated, async(request, response) => {
+=======
+app.get('/element_add', async(request, response) => {
+>>>>>>> harini
   const totalCount = await Product.countDocuments({});
     response.render('productadd',{totalCount});
   });
 
+<<<<<<< HEAD
 app.post('/element_add',isAuthenticated,upload.single('images'),async(request,response)=>{
+=======
+app.post('/element_add',upload.single('images'),async(request,response)=>{
+>>>>>>> harini
   const name=request.body.name;
   const price=request.body.price;
   
@@ -686,7 +698,11 @@ app.get('/products', async (req, res) => {
 
 
 
+<<<<<<< HEAD
 app.get('/deleteproduct',isAuthenticated, async (req, res) => {
+=======
+app.get('/deleteproduct', async (req, res) => {
+>>>>>>> harini
   try {
     const totalCount = await Product.countDocuments({});
     const products = await Product.find();
@@ -700,7 +716,11 @@ app.get('/deleteproduct',isAuthenticated, async (req, res) => {
   });
 
   
+<<<<<<< HEAD
 app.post('/deleteproduct/:fileId',isAuthenticated, async (req, res) => {
+=======
+app.post('/deleteproduct/:fileId', async (req, res) => {
+>>>>>>> harini
   const fileId = req.params.fileId;
   console.log(fileId);
 

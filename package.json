@@ -8,7 +8,11 @@
     "nodemailer": "^6.9.7",
     "path": "^0.12.7"
   },
+<<<<<<< HEAD
    "engines": {
+=======
+  "engines": {
+>>>>>>> harini
     "node": ">=14.20.1"
   }
 }
